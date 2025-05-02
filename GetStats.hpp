@@ -17,6 +17,13 @@ public:
     }
 
     int* getStats() const{
+        if(head == nullptr){
+            int* arr = new int[3];
+            arr[0] = 0;
+            arr[1] = 0;
+            arr[2] = 0;
+        }
+        
         int* arr = new int[3];
         Node* temp = head;
         int min = temp->data;
