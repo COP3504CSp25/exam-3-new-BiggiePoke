@@ -1,22 +1,15 @@
 #include <iostream>
-#include "ReverseList.hpp"
+#include "MaxMap.hpp"
 
 int main(){
-    LinkedList list;
-
+    std::map<std::string, std::vector<float>> map;
+    std::vector<float> vector = {1,2,3};
+    map.emplace("beavus", vector);
     
-    list.addHead(1);
-    list.addHead(2);
-    list.addHead(3);
-
-    LinkedList newlist = list.reverseList();
-
-    Node* temp = newlist.head;
-
-    while (temp != nullptr){
-        std::cout << temp->data << std::endl;
-        temp = temp->next;
-    }
+   std::cout << consultMax("beavus" , map) << std::endl;
+   
+   std::cout << returnMaxMap( map)["beavus"] << std::endl;
+    
     
     
     return 0;
