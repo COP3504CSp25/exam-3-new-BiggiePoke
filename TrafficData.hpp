@@ -7,7 +7,11 @@
 #include <sstream>
 
 std::map<std::string, int> loadTrafficData(const std::string& filename) {
-  //implement your function here!
+  // //implement your function here!
+  // std::map<std::string, int> map;
+  // std::fstream stream;
+  
+  // stream.
 }
 
 void updateTrafficData(const std::string& filename, std::map<std::string, int>& dataMap) {
