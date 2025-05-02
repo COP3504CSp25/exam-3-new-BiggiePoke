@@ -22,10 +22,15 @@ public:
             size ++;
             temp = temp->next;
         }
-        for (int i = 0 ; i < size ; i ++){
-            
+        temp = head;
+        for (int i = size-1 ; i >= 0 ; i --){
+            for (int j = 0 ; j < i ; j ++){
+                temp=temp->next;
+            }
+            reversedList.addHead(temp->data);
+            temp =head;
         }
-
+        return reversedList;
     }
 
     Node* head = nullptr;

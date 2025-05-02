@@ -1,16 +1,22 @@
 #include <iostream>
-#include "GetStats.hpp"
+#include "ReverseList.hpp"
 
 int main(){
     LinkedList list;
 
     
-    int* arr = list.getStats();
+    list.addHead(1);
+    list.addHead(2);
+    list.addHead(3);
 
-    for ( int i = 0 ; i < 3 ; i++){
-        std::cout << arr[i] << std::endl;
+    LinkedList newlist = list.reverseList();
+
+    Node* temp = newlist.head;
+
+    while (temp != nullptr){
+        std::cout << temp->data << std::endl;
+        temp = temp->next;
     }
-    
     
     
     return 0;
